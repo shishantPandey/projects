@@ -1,0 +1,54 @@
+.h1 {
+	font-family: pacfico, cursive;
+	font-size: 80px;
+	margin-top: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+#ft {
+	max-width: 30vw;
+	font-family: Homemade, cursive;
+	min-height: 60vh;
+}
+#st {
+	max-width: 30vw;
+	font-family: Homemade, cursive;
+	min-height: 60vh;
+}
+#tt {
+	max-width: 30vw;
+	font-family: Homemade, cursive;
+	min-height: 60vh;
+}
+#flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 500px) {
+	.h1 {
+		font-size: 60px;
+	}
+	#flex {
+		flex-direction: column;
+		width: 100vw;
+		height: 20%;
+	}
+	#flex p {
+		font-size: small;
+	}
+	#ft {
+		min-width: 100vw;
+		font-family: Homemade, cursive;
+		max-height: 5vh;
+	}
+	#st {
+		min-width: 100vw;
+		font-family: Homemade, cursive;
+		max-height: 5vh;
+	}
+	#tt {
+		min-width: 100vw;
+		font-family: Homemade, cursive;
+	}
+}

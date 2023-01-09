@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="text" name="" id="a" />
+		<select name="" id="se">
+			<option value="Hours" id="h">Hours</option>
+			<option value="Minutes">Minutes</option>
+			<option value="seconds">seconds</option>
+		</select>
+		<input type="text" name="" id="b" disabled />
+		<button id="btn">find</button>
+		<button id="ch">Change</button>
+	</body>
+	<script>
+		let a = document.getElementById("a");
+		let b = document.getElementById("b");
+		let se = document.getElementById("se");
+		let btn = document.getElementById("btn");
+		let ch = document.getElementById("ch");
+		btn.onclick = () => {
+			console.log(a.value + " value of first box");
+			console.log(b.value + "value o f last box");
+			console.log(se.value + "value of selected optiion");
+			if (se.value == "Hours") {
+				if (a.value == 0) {
+					b.value = "Please Give a value";
+				} else {
+					let hr = a.value * 24;
+					console.log(hr);
+					b.value = hr;
+				}
+			} else if (se.value == "Minutes") {
+				let min = a.value * 24 * 60;
+				b.value = min;
+			} else {
+				let sec = a.value * 24 * 60 * 60;
+				b.value = sec;
+			}
+		};
+		let st = 0;
+		if (st == 0) {
+			clearInterval(aas);
+		} else {
+			let aas = setInterval(() => {
+				console.log("hello");
+				st++;
+			}, 1000);
+		}
+	</script>
+</html>
